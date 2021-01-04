@@ -36,11 +36,11 @@
     }
   </style>
 </head>
-  <header class="headerbar">
-      <button on="tap:sidebar1.open">☰</button>
-      <div class="site-name">AMP Stránka</div>
-  </header>
   <body>
+     <header class="headerbar">
+        <button on="tap:sidebar1.open">☰</button>
+        <div class="site-name">AMP Stránka</div>
+    </header>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
           <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
             <ul class="sidebar">
@@ -50,9 +50,9 @@
             </ul>
           </nav>
         </amp-sidebar>
-    <amp-layout layout="responsive" width="1" height="1">          
+    <amp-layout layout="responsive" width="1" height="1">     
+      <h1>Nadpis Lorem Ipsum</h1>
       <amp-accordion id="my-accordion" disable-session-states>
-        <h1>Nadpis Lorem Ipsum</h1>
         <section>
           <h2>Work work!</h2>
           <amp-anim width="400" height="300" src="w3.gif">
@@ -61,6 +61,7 @@
         </section>
         <section>
           <h2>Obrázek<h2>
+            <p>Text
             <amp-img alt="Obrázek" src="org.jpg" width="900" height="675" layout="responsive"></amp-img>
         </section>
       </amp-accordion>
