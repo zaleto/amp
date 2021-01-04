@@ -18,10 +18,17 @@
       align-items: center;
       background: red;
     }
-    nav {
-      overflow: auto;
+    .sidebar {
+      padding: 10px;
+      margin: 0;
     }
-    
+    .sidebar > li {
+      list-style: none;
+      margin-bottom:10px;
+    }
+    .sidebar a {
+      text-decoration: none;
+    }
   </style>
 </head>
   <header class="headerbar">
@@ -30,7 +37,7 @@
   <body>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
       <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
-        <ul>
+        <ul class="sidebar">
           <li>Něco 1</li>
           <li>Něco 2</li>
           <li><button on="tap:sidebar1.close">Zavřít</button></li>
