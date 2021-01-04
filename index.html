@@ -16,10 +16,11 @@
       width: 100%;
       display: flex;
       align-items: center;
+      background: red;
     }
-  nav [toolbar] {
-    overflow: auto;
-  }
+    nav {
+      overflow: auto;
+    }
     
   </style>
 </head>
@@ -30,11 +31,9 @@
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
       <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
         <ul>
-          <li>Otevřít něco</li>
-          <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
-          <li>Nav item 3</li>
-          <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
-          <li><button on="tap:sidebar1.close">x</button></li>
+          <li>Něco 1</li>
+          <li>Něco 2</li>
+          <li><button on="tap:sidebar1.close">Zavřít</button></li>
         </ul>
       </nav>
     </amp-sidebar>
