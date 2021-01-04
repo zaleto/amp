@@ -7,7 +7,7 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   
-  <style>
+  <style amp-custom="">
     .headerbar {
       height: 50px;
       position: fixed;
@@ -17,24 +17,26 @@
       display: flex;
       align-items: center;
     }
+  nav [toolbar] {
+    overflow: auto;
+  }
+    
   </style>
 </head>
   <header class="headerbar">
-      <button class="hamburger" on="tap:sidebar1.toggle"></button>
-      <button on="tap:sidebar1">Open</button>
-      <button on="tap:sidebar1.open">Open</button>
-      <button on="tap:sidebar1.close">x</button>
+      <button on="tap:sidebar1.open">Boční menu</button>
   </header>
   <body>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
-      <ul>
-        <li>Nav item 1</li>
-        <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
-        <li>Nav item 3</li>
-        <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
-        <li>Nav item 5</li>
-        <li>Nav item 6</li>
-      </ul>
+      <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
+        <ul>
+          <li>Otevřít něco</li>
+          <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
+          <li>Nav item 3</li>
+          <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
+          <li><button on="tap:sidebar1.close">x</button></li>
+        </ul>
+      </nav>
     </amp-sidebar>
    <!-- <amp-img alt="Obrázek" src="org.jpg" width="900" height="675" layout="responsive"></amp-img> -->
                                                                                               
