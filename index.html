@@ -29,23 +29,37 @@
     .sidebar a {
       text-decoration: none;
     }
+    .site-name {
+      margin: auto;
+    }
   </style>
 </head>
   <header class="headerbar">
       <button on="tap:sidebar1.open">☰</button>
-      AMP Stránka
+      <div class="site-name">AMP Stránka</div>
   </header>
   <body>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
-      <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
-        <ul class="sidebar">
-          <li>Něco 1</li>
-          <li>Něco 2</li>
-          <li><button on="tap:sidebar1.close">Zavřít</button></li>
-        </ul>
-      </nav>
-    </amp-sidebar>
-   <!-- <amp-img alt="Obrázek" src="org.jpg" width="900" height="675" layout="responsive"></amp-img> -->
+          <nav toolbar="(max-width: 767px)" toolbar-target="target-element">
+            <ul class="sidebar">
+              <li>Něco 1</li>
+              <li>Něco 2</li>
+              <li><button on="tap:sidebar1.close">Zavřít</button></li>
+            </ul>
+          </nav>
+        </amp-sidebar>
+        <amp-layout layout="responsive" width="1" height="1">
+          <amp-accordion id="my-accordion" disable-session-states>
+      <section>
+        <h2> 1</h2>
+        <p>Content in section 1.</p>
+      </section>
+      <section>
+        <h2>Obrázek<h2>
+          <amp-img alt="Obrázek" src="org.jpg" width="900" height="675" layout="responsive"></amp-img>
+      </section>
+    </amp-accordion>
+    </amp-layout>
                                                                                               
   </body>
 </html>
